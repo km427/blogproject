@@ -5,6 +5,7 @@ from django.core.paginator import PageNotAnInteger,EmptyPage,Paginator
 from django.contrib.auth.decorators import login_required
 from testapp.forms import sharebyemail,commentsform
 # Create your views here.
+@login_required()
 def postlist(request,tag_slug=None):
     post_list=post.objects.all()
     tag=None

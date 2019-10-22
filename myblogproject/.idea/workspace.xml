@@ -25,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/mani_python/Django/My_projects/myauthproject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -112,6 +112,7 @@
       <workItem from="1571743196138" duration="657000" />
       <workItem from="1571743863793" duration="743000" />
       <workItem from="1571744639059" duration="559000" />
+      <workItem from="1571745566105" duration="592000" />
     </task>
     <servers />
   </component>
