@@ -1,4 +1,5 @@
 from django import forms
+# for sample
 class sharebyemail(forms.Form):
     name = forms.CharField()
     email = forms.EmailField()
