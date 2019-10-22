@@ -2,6 +2,7 @@ from django.shortcuts import render,get_object_or_404
 from testapp.models import post
 from taggit.models import Tag
 from django.core.paginator import PageNotAnInteger,EmptyPage,Paginator
+from django.contrib.auth.decorators import login_required
 from testapp.forms import sharebyemail,commentsform
 # Create your views here.
 def postlist(request,tag_slug=None):
@@ -50,7 +51,7 @@ def shareemail(request,id):
     return render(request,"testapp/shareemail.html",{"post":post_list,"form":form,"sent":sent,"email":to})
 
 
-
+@login_required()
 def post_detail(request,year,month,day,sl):
     obj=get_object_or_404(post,publish__year=year,
                           status='published',
