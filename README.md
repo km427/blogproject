@@ -1,5 +1,5 @@
 # blogproject
-Blog project developed by using django
-use django 2.0 or above
-install django-taggit
+Blog project developed by using django.
+use django 1.11.6  and python 3.8.
+install django-taggit.
 
