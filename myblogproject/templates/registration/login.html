@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{%load blog_tags%}
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title_block%}{%endblock%}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/demo.css" %}">
+
+</head>
+<body>
+<div class="jumbotron">
+    <div class="cintainer" align="center">
+    <form method="post">
+            <h3 id="log">Plz Log in Here</h3>
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" align="center" class="btn btn-success" value="Login">&nbsp&nbsp
+            <a href="/signup" class="btn btn-primary">Sign up</a>
+
+
+    </form>
+</div>
+</div>
+
+</body>
+</html>

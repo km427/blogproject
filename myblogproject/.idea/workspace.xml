@@ -29,6 +29,9 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\local_repo\myblogproject\templates\registration" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\mani_python\Django\myblogproject\testapp" />
     </key>
@@ -113,6 +116,10 @@
       <workItem from="1571743863793" duration="743000" />
       <workItem from="1571744639059" duration="559000" />
       <workItem from="1571745566105" duration="592000" />
+      <workItem from="1571895866779" duration="148000" />
+      <workItem from="1571921495557" duration="826000" />
+      <workItem from="1571922375805" duration="1784000" />
+      <workItem from="1571924188892" duration="897000" />
     </task>
     <servers />
   </component>

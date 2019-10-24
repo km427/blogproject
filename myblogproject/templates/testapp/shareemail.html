@@ -6,7 +6,7 @@
         <h2>{{ post.title }} post is Successfully shared to {{ email }}</h2>
         <a href="/" class="btn btn-primary">Back</a>
     {% else %}
-        <h2 align="center" >Share {{post.title|title}} Post</h2>
+        <h2 align="center" >Hii {{ user.username }} plz Share {{post.title|title}} Post</h2>
         <div class="container" align="center">
             <form method="post">
             {{ form.as_p }}

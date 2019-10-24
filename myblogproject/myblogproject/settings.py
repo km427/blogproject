@@ -123,9 +123,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_SUCCESS_URL='/'
 STATICFILES_DIRS = [
     STATIC_DIR
 ]
+
+LOGIN_REDIRECT_URL='/'
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT=587
 EMAIL_HOST_USER='python6656@gmail.com'

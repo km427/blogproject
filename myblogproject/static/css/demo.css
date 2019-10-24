@@ -69,3 +69,10 @@ h2{
     color: red;
     text-decoration-color: red;
 }
+#sign{
+    font-size: medium;
+    font-weight: bold;
+    color: red;
+    text-decoration-color: red;
+    align-content: center;
+}

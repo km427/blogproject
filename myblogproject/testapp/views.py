@@ -4,8 +4,10 @@ from taggit.models import Tag
 from django.core.paginator import PageNotAnInteger,EmptyPage,Paginator
 from django.contrib.auth.decorators import login_required
 from testapp.forms import sharebyemail,commentsform
+from testapp.forms import signupform
+from django.http import HttpResponseRedirect
 # Create your views here.
-@login_required()
+
 def postlist(request,tag_slug=None):
     post_list=post.objects.all()
     tag=None
@@ -34,6 +36,9 @@ def postlist(request,tag_slug=None):
 #     model = post
 #     paginate_by = 3
 from django.core.mail import send_mail
+
+
+@login_required()
 def shareemail(request,id):
     post_list=get_object_or_404(post,id=id,status='published')
     sent=False
@@ -52,7 +57,6 @@ def shareemail(request,id):
     return render(request,"testapp/shareemail.html",{"post":post_list,"form":form,"sent":sent,"email":to})
 
 
-@login_required()
 def post_detail(request,year,month,day,sl):
     obj=get_object_or_404(post,publish__year=year,
                           status='published',
@@ -72,3 +76,15 @@ def post_detail(request,year,month,day,sl):
     else:
         form=commentsform()
     return render(request,"testapp/post_detail.html",{'obj':obj,"comments":comments,"form":form,"csubmit":csubmit})
+
+def signupview(request):
+    form=signupform()
+    if request.method=="POST":
+        data=signupform(request.POST)
+        data=data.save()
+        data.set_password(data.password)
+        data.save()
+        return HttpResponseRedirect('/accounts/login')
+
+
+    return render(request,"testapp/sign.html",{"form":form})

@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-from testapp.views import postlist,post_detail,shareemail
+from testapp.views import postlist,post_detail,shareemail,signupview
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^tag/(?P<tag_slug>[-\w]+)/$',postlist,name='post_list_by_tag_name'),
     url(r'^(?P<id>[0-9]+)/share/$', shareemail),
     url(r'^accounts/',include("django.contrib.auth.urls")),
+    url(r'^signup/',signupview),
     # url(r'^$',page.as_view()),
     url(r'(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<sl>[-\w]+)/$',post_detail,name='post_details')
 ]
